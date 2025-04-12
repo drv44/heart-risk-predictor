@@ -5,4 +5,4 @@ tensorflow
 joblib
 flask
 flask-cors
-guicorn
+gunicorn
