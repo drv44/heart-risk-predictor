@@ -30,9 +30,12 @@ async function handleSubmit() {
       }
     }, 400);
 
+    const baseUrl = window.location.hostname.includes("localhost")
+      ? "http://127.0.0.1:5000"
+      : "https://heart-risk-predictor.onrender.com";
+
     const response = await fetch(
-      //   "https://heart-risk-predictor.onrender.com",
-      "http://127.0.0.1:5000/predict",
+      `${baseUrl}/predict`,
       {
         method: "POST",
         headers: {
